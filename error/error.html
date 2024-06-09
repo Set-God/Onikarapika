@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>見つかりませんでした</title>
+</head>
+
+<body>
+   <div class="wrap">
+      <div class="error">
+         <h1>404お探しのページが見つかりませんでした。</h1>
+         <img src="/images/error.png" alt="エラー" class="image" ondrag="return false;">
+         <div class="errormenu">
+            <button onclick="window.location.reload()">再接続</button>
+            <h3>または</h3>
+            <button onclick="undo()">ページに戻る</button>
+            <a href="">ヘルプ</a>
+         </div>
+      </div>
+   </div>
+   <style>
+      
+      .image {
+         display: flex;
+         height: 200px;
+         justify-content: center;
+         align-items: center;
+         transform: translate(166%);
+      }
+      button{
+         display: flex;
+         width: 100px;
+         height: 70px;
+         border-radius: 30px;
+         border: none;
+         cursor: pointer;
+      }
+      button:hover {
+         transform: scale(0.8);
+      }
+      .errormenu{
+         transform: translate(40%);
+         
+      }
+      html, body {
+            width: 200vh;
+            height: 100vh;
+            overflow-y: none;
+            overflow: none;
+        }
+   </style>
+   <script src="/error/scriptAPI/API.JS"></script>
+   <script>
+      function undo(){
+         window.undo();
+      }
+      
+  </script>
+</body>
+
+</html>

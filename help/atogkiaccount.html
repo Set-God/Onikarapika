@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>あとがき</title>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <div class="HelpUI">
+      <div class="ques">
+         <h1>あとがき</h1>
+         <p>あとがきです。おにぎりコーポレーションシリーズです。オニカラピカをご利用頂ありがとうございます。Web開発をやったりしてます。アプリケーション開発もしています！おにぎりコーポレーションシリーズは、公開したことあります。githubで公開します。俺は、普通に、YouTuberです。YouTubeも見てください。詳しくは、ブーストクラブで！👀そしたら、俺のアイコンをクリックして、登録！このページは、少し開発段階があります。申し訳ないですが、1部の機能が、使えない可能性があります。</p>
+      </div>
+      <div class="maincontent">
+         <button class="toggle" id="tog" style="border: none; background: transparent; cursor: pointer;" title="開く"><span class="material-symbols-outlined">menu</span></button>
+         <div class="menu">
+            <menu type="toolbar" class="menus" style="display: none;">
+               <button style="border: none; background: transparent; cursor: pointer;" class="X" title="閉じる"><span class="material-symbols-outlined">close</span></button>
+               <br><li><a href="helpaccount.html" style="text-decoration: none;" id="linkplac">ヘルプホーム</a></li>
+               <br><li><a href="/error/error.html" style="text-decoration: none;" id="linkplac">匿名</a></li>
+               <br><li><a href="/error/error.html" style="text-decoration: none;" id="linkplac">デベロッパーからのあとがき</a></li>
+               <br><li><a href="/error/error.html" style="text-decoration: none;" id="linkplac">デベロッパーモードにする場合</a></li>
+               <br><li><a href="/error/error.html" style="text-decoration: none;" id="linkplac">デベロッパープログラムhtに参加する方法</a></li>
+               <br><li><a href="" style="text-decoration: none;" id="linkplac">戻る</a></li>
+            </menu>
+         </div>
+      </div>
+   </div>
+   <style>
+      .A{
+         color: blue;
+      }
+      .dropdown{
+         border: none;
+         cursor: pointer;
+         background: transparent;
+      }
+   </style>
+   <noscript>
+      <strong>オニカラにアクセス許可されませんでした。スクリプトを許可にしてください。/Onikara was not granted permission. Please allow scripts.</strong>
+      <style>
+         .HelpUI {
+            display: none;
+         }
+      </style>
+   </noscript>
+   <script>
+      let tog = document.getElementById('tog');
+      let menusclass = document.querySelector('.menus');
+      let close = document.querySelector('.X');
+      let drop = document.querySelectorAll('.dropdown');
+      // let linkplace = document.querySelectorAll('#linkplac');
+      let ques = document.querySelectorAll('.A')
+      tog.addEventListener('click', (e) => {
+         menusclass.setAttribute('style', 'display: block;');
+      });
+      close.addEventListener('click', (e) => {
+         menusclass.setAttribute('style', 'display: none;');
+      });
+      
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+<!-- HTML(Document)設定 -->
+<html>
+   <!-- ヘッダー -->
+<head>
+   <!-- エンコードUTF-8を使用 -->
+   <meta charset="UTF-8">
+   <!-- ビューポート設定（メタ設定） -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- X-UA設定 -->
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <!-- サイトのタイトル -->
+   <title>オニピカ</title>
+</head>
+<!-- ボディ全体設定 -->
+<body>
+   <style>
+      /* d1（htmlにある）設定 */
+      #d1 {
+         /* ポジション（位置）を絶対位置に設定 */
+         position: absolute;
+         /* top設定 */
+         top: 100px;
+         left: 100px;
+      }
+      /* c0~8（htmlにある）設定 */
+      #c0 {
+         position: relative;
+         width: 100%;
+         height: 100%;
+      }
+      
+      #c1 {
+         position: relative;
+         width: 100%;
+         height: 100%;
+      }
+      
+      #c2 {
+         position: relative;
+         width: 100%;
+         height: 100%;
+      }
+      
+      #c3 {
+         position: relative;
+         width: 100%;
+         height: 100%;
+      }
+      
+      #c4 {
+         position: relative;
+         width: 100%;
+         height: 100%;
+      }
+      
+      #c5 {
+         position: relative;
+         width: 100%;
+         height: 100%;
+      }
+      
+      #c6 {
+         position: relative;
+         width: 100%;
+         height: 100%;
+      }
+      
+      #c7 {
+         position: relative;
+         width: 100%;
+         height: 100%;
+      }
+      
+      #c8 {
+         position: relative;
+         width: 100%;
+         height: 100%;
+      }
+   </style>
+   
+   <script>
+   // イベント（クリックされた時）
+   function copyed(){
+      // textスタイル
+      const txt = document.getElementById('text').style.display = "block";
+      // スタイル
+      const cse = document.getElementById('close')
+      // click関数
+      function X(){
+         txt.style.display = "none";
+      }
+      // インプット登録
+      let hexclass = document.querySelector(".hexs");
+      // セレクト
+      hexclass.select();
+      // コピー
+      document.execCommand("copy");
+   }
+   // カラー設定
+   var pcolor = [
+      "#FFFFFF",
+      "#FFFF00",
+      "#125C00",
+      "#FF0000",
+      "#CC00FF",
+      "#FF8C00",
+      "#00FF00",
+      "#0000FF",
+      "#000000",
+      ]
+   // ロード時
+   window.onload = function() {
+      document.getElementById('c0').style.backgroundColor = pcolor[0];
+      document.getElementById('c1').style.backgroundColor = pcolor[1];
+      document.getElementById('c2').style.backgroundColor = pcolor[2];
+      document.getElementById('c3').style.backgroundColor = pcolor[3];
+      document.getElementById('c4').style.backgroundColor = pcolor[4];
+      document.getElementById('c5').style.backgroundColor = pcolor[5];
+      document.getElementById('c6').style.backgroundColor = pcolor[6];
+      document.getElementById('c7').style.backgroundColor = pcolor[7];
+      document.getElementById('c8').style.backgroundColor = pcolor[8];
+   }
+   
+   // クリック時イベント関数onclick※必ずエラーが出ないようにする為パラメーターをn。
+      function cclick(n){
+         // テーブルをクリックした時にテキストボックスを関数パラメーターに合わせる
+         document.f1.hex.value = pcolor[n];
+         
+      }
+      
+   </script>
+   <!-- フォーム -->
+   <form name="f1">
+      <!-- コンテイナディブタグ -->
+      <div id="d1">
+         <p id="text" style="display: none;">コピー済<button onclick="X()" id="close">❎</button></p>
+         <!-- hexの入力する所 -->
+         <input type="text" name="hex" size="10" class="hexs"><button class="cpy" onclick="copyed();">コピー</button><p>
+         <!-- テーブル -->
+         <table width="100" height="100" border="1">
+            <!-- ピッカー設定 -->
+            <tr>
+               <!-- カラーピッカー -->
+               <td><div id="c0" onclick="cclick(0)"></div></td><td><div id="c1" onclick="cclick(1)"></td><td><div id="c2" onclick="cclick(2)"></td>
+            </tr>
+            <!-- ピッカー設定2 -->
+            <tr>
+               <td><div id="c3" onclick="cclick(3)"></div></td><td><div id="c4" onclick="cclick(4)"></td><td><div id="c5" onclick="cclick(5)"></td>
+            </tr>
+            <!-- ピッカー設定3 -->
+            <tr>
+               <td><div id="c6" onclick="cclick(6)"></div></td><td><div id="c7" onclick="cclick(7)"></td><td><div id="c8" onclick="cclick(8)"></td>
+            </tr>
+            <input type="color" onclick="cclick(6)">
+         </table>
+         
+      </div>
+      
+   </form>
+   <a href="./help/helpaccount.html">ヘルプ</a>
+   
+   <noscript>
+      <img src="./images/scriptno.png" alt="スクリプトない" height="100">
+      <img src="./images/scriptyukou.jpg" alt="スクリプト有効にしてください。" height="100">
+      <br><strong>スクリプトがありません。</strong>
+      <br><strong>スクリプトを有効にしてください。</strong>
+      <br><strong>スクリプトが有効されてない場合、ヘルプ機能は使えません。</strong>
+      <br><strong>サポート機能 -- ✅</strong>
+      <br><strong>JavaScript有効化 -- ❌</strong>
+      <br><strong>ヘルプ機能 -- ❌</strong>
+      <br><strong>システム -- ✅</strong>
+      <style>
+      a{
+         display: none;
+      }
+         form {
+            display: none;
+         }
+      </style>
+   </noscript>
+</body>
+</html>

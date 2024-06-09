@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>デベロッパーモードにする場合</title>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <div class="HelpUI">
+      <div class="ques">
+         <h1>デベロッパーモードにする場合</h1>
+         <p>デベロッパーモードは、ログイン必要です。</p>
+         <p>1, <a href="">デベロッパープログラムht</a>に参加する</p>
+         <p>2, [設定] -> [拡張] -> [デベロッパー] -> [デベロッパーモードを有効]をクリック※開発停止しました。</p>
+         <button class="settings" id="setb">設定</button>
+         <!--<div class="setUI">
+            <div class="UIsett">
+               <div class="set">
+                  <p>デベロッパーモード</p>
+                  <button id="Dy" class="U4">有効</button>
+                  <button id="Dn" class="U3">無効</button>
+                  <p>UI表示/非表示</p>
+                  <button id="UIfal" class="U1" onclick="UIf()">無効</button>
+                  <button id="UItru" class="U2" onclick="UIt()">有効</button>
+                  <p>設定テキスト表示</p>
+                  <p>プレビュー</p>
+                  <button id="UIfal" onclick="B1()">無</button>
+                  <button id="UItru" onclick="B2()">無し</button>
+                  <p>他</p>
+                  <p>初期設定</p>
+                  <button id="default">デフォルトに戻す</button>
+                  
+               </div>
+            </div>-->
+         </div>
+      </div>
+      <div class="maincontent">
+         <button class="toggle" id="tog" style="border: none; background: transparent; cursor: pointer;" title="開く"><span class="material-symbols-outlined">menu</span></button>
+         <div class="menu">
+            <menu type="toolbar" class="menus" style="display: none;">
+               <button style="border: none; background: transparent; cursor: pointer;" class="X" title="閉じる"><span class="material-symbols-outlined">close</span></button>
+               <br><li><a href="helpaccount.html" style="text-decoration: none;" id="linkplac">ヘルプホーム</a></li>
+               <br><li><a href="/error/error.html" style="text-decoration: none;" id="linkplac">匿名</a></li>
+               <br><li><a href="/error/error.html" style="text-decoration: none;" id="linkplac">デベロッパーからのあとがき</a></li>
+               <br><li><a href="/error/error.html" style="text-decoration: none;" id="linkplac">デベロッパーモードにする場合</a></li>
+               <br><li><a href="/error/error.html" style="text-decoration: none;" id="linkplac">デベロッパープログラムhtに参加する方法</a></li>
+               <br><li><a href="" style="text-decoration: none;" id="linkplac">戻る</a></li>
+            </menu>
+         </div>
+      </div>
+   </div>
+   <style>
+      html {
+         width: 100vh;
+         height: 200vh;
+      }
+      .A{
+         color: blue;
+      }
+      .dropdown{
+         border: none;
+         cursor: pointer;
+         background: transparent;
+      }
+      .setUI{
+         border: 3px solid black;
+         height: 800px;
+         width: 600px;
+      }
+      .cus{
+         border: 5px solid black;
+         height: 300px;
+      }
+   </style>
+   <noscript>
+      <strong>オニカラにアクセス許可されませんでした。スクリプトを許可にしてください。/Onikara was not granted permission. Please allow scripts.</strong>
+      <style>
+         .HelpUI {
+            display: none;
+         }
+      </style>
+   </noscript>
+   <script>
+      
+      let tle = document.querySelector('h1')
+      let tog = document.getElementById('tog');
+      let menusclass = document.querySelector('.menus');
+      let close = document.querySelector('.X');
+      let drop = document.querySelectorAll('.dropdown');
+      // let linkplace = document.querySelectorAll('#linkplac');
+      let ques = document.querySelectorAll('.A');
+      let U1S = document.querySelector('.U1');
+      let U2S = document.querySelector('.U2');
+      let U3S = document.querySelector('.U3');
+      let U4S = document.querySelector('.U4');
+      tog.addEventListener('click', (e) => {
+         menusclass.setAttribute('style', 'display: block;');
+      });
+      close.addEventListener('click', (e) => {
+         menusclass.setAttribute(
+            'style', 'display: none;');
+      });
+      let errUI = document.querySelector('.errorUI');
+      function UIf(){
+         alert('開発中');
+      }
+      function UIt() {
+         alert('開発中');
+      }
+      
+      /*function t2s(){
+         
+      }
+      function B1(){
+         U1S.textContent = '無';
+         U2S.textContent = '有';
+         U3S.textContent = '無';
+         U4S.textContent = '有';
+      }
+      function B2(){
+         U1S.textContent = '無効';
+         U2S.textContent = '有効';
+         U3S.textContent = '無効';
+         U4S.textContent = '有効';
+      }*/
+   </script>
+</body>
+
+</html>
+</body>
+
+</html>

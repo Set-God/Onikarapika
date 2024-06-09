@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <h1
+      class="text-green text-center font-weight-bold"
+      style="font-size: 40px;"
+    >
+      おにぎりページアカウント作成
+    </h1>
+
+    <h4 class="text-blue text-center font-weight-bold" style="font-size: 20px;">
+      おにぎりページ Ｐｏｗｏｒｅｄ ｂｙ Ｏｎｉｇｉｒｉｐａｇｅ
+    </h4>
+
+    <div class="container">
+      <br />
+
+      <div class="col-lg-5 m-auto d-block">
+        <form action="#" onsubmit="return validation()" class="bg-light">
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"> あなたの名前 </label>
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label class="font-weight-regular"> メールアドレス </label>
+            <input
+              type="text"
+              name="email"
+              class="form-control"
+              id="emails"
+              autocomplete="off"
+            />
+            <span id="emailids" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="user" class="font-weight-regular"> おにぎりID </label>
+            <input
+              type="text"
+              name="user"
+              class="form-control"
+              id="user"
+              autocomplete="off"
+            />
+            <span id="OID" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label class="font-weight-regular"> パスワード作成用 </label>
+            <input
+              type="password"
+              name="pass"
+              class="form-control"
+              id="pass"
+              autocomplete="off"
+            />
+            <span id="passwords" class="text-danger font-weight-regular">
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label class="font-weight-regular"> パスワード確認用 </label>
+            <input
+              type="password"
+              name="conpass"
+              class="form-control"
+              id="conpass"
+              autocomplete="off"
+            />
+            <span id="confrmpass" class="text-danger font-weight-regular">
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label class="font-weight-regular"> 電話番号 </label>
+            <input
+              type="text"
+              name="mobile"
+              class="form-control"
+              id="mobileNumber"
+              autocomplete="off"
+            />
+            <span id="mobileno" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <input
+            type="submit"
+            name="submit"
+            value="作成"
+            class="btn btn-primary"
+            autocomplete="off"
+          />
+          <input
+            type="reset"
+            name="reset"
+            value="アカウント作成文消去"
+            class="btn btn-secondary"
+            autocomplete="off"
+          />
+          &emsp;&emsp;&emsp;アカウントお持ちの方
+          <a href="Onigiripage.html">ログイン</a>
+        </form>
+
+        <br /><br />
+      </div>
+    </div>
+
+    <script src="./scripts/signup.js"></script>
+    
+  </body>
+</html>

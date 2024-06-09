@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>ヘルプログイン</title>
+</head>
+
+<body>
+   <div class="loginUI">
+      <div class="group">
+         <form action="#">
+            <input type="email" placeholder="メールアドレス">
+            <input type="password" placeholder="パスワード">
+            <a href="">パスワードを忘れた場合</a>
+            <a href="">アカウント作成</a>
+            <p id="err">同意出来ませんでした。同意できない限りログイン出来ません。</p>
+            <input type="button" value="同意" class="doui">
+            <button disabled="true" class="login">ログイン</button>
+            <p class="load" style="display: block; transform: translateY(7%)"></p>
+            
+         </form>
+         <div class="alertbox">
+            <h1>本当に同意しますか？</h1>
+            <br><button type="button" class="btn yes-btn" id="yes">はい</button>
+            <button type="button" class="btn no-btn" id="no">いいえ</button>
+            <p class="load" style="display: block; transform: translateY(7%)"></p>
+         </div>
+      </div>
+   </div>
+   <style>
+      .alertbox {
+         display: none;
+         border-radius: 30px;
+         border: inset;
+         background: green;
+      }
+      .btn {
+         border-radius: 9px;
+         border: none;
+      }
+      .yes-btn:hover {
+         background-color: yellowgreen;
+      }
+      
+      .no-btn:hover {
+         background-color: red;
+      }
+      
+      #err {
+         color: red;
+         display: none;
+      }
+   </style>
+   <script>
+      const Alert = document.querySelector('.alertbox')
+      const No = document.getElementById('no');
+      const Yes = document.getElementById('yes');
+      const Douibtn = document.querySelector('.doui');
+      const errortxt = document.getElementById('#err');
+      const lgnbtn = document.querySelector('.login');
+      const loading = document.querySelector('.load');
+      let counts = 1;
+      
+      setInterval(() => {
+         loading.innerText = 'アセット挿入中...' + counts + '%';
+         if(counts > 10) loading.innerText = 'JavaScriptを読み込み中...' + counts + '%';
+         counts++
+         
+         if(counts > 20) loading.innerText = 'htmlを確認中...' + counts + '%';
+         if(counts > 30) loading.innerText = 'リプレース中...' + counts + '%';
+         if(counts > 40) loading.innerText = 'リソース読み込み中...' + counts + '%';
+         if(counts > 46) loading.innerText = 'ログインファイルをコピー中...' + counts + '%';
+         if(counts > 49) loading.innerText = '言語読み込み中... 言語:' + '日本語（JA デフォルト）' + counts + '%';
+         if(counts > 70) loading.innerText = 'プレース読み込み中... プレース:' + 'helpaccount.html プレースID:' + '100-1 カウント:' + counts + '%';
+         if(counts > 74) loading.innerText = 'アセット部分は読み込み完了まだ、読み込みは完全完了していません！１％確認済です。もう少しお待ちください。ステップ2';
+         if(counts > 76) loading.innerText = '読み込みしてるアセット:Replace開始します';
+         if(counts > 78) loading.innerText = '読み込み中' + counts + '%';
+         if(counts > 80) loading.innerText = '読み込み完了移動します'
+         if(counts > 82) loading.innerText = '移動中' + counts + '%';
+         if(counts > 84) location.replace('/help/helpaccount.html');
+         
+      }, 1000);
+      No.addEventListener('click', () => {
+         Alert.style.display = 'none';
+      });
+      Douibtn.addEventListener('click', () => {
+         Alert.style.display = 'block';
+      });
+      Yes.addEventListener('click', () => {
+         Alert.style.display = 'none';
+         lgnbtn.toggleAttribute('disabled');
+         Douibtn.setAttribute('disabled','true')
+      });
+      lgnbtn.addEventListener('click', () => {
+         loading.setAttribute('style','display: block;');
+         
+      });
+      
+   </script>
+   <noscript>
+      <strong>オニカラにアクセス許可されませんでした。ログイン出来ません。 </strong>
+      <style>
+         .loginUI {
+            display: none;
+         }
+      </style>
+   </noscript>
+</body>
+
+</html>

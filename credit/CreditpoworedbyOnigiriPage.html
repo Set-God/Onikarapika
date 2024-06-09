@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>クレジット</title>
+</head>
+
+<body>
+   <div class="UI">
+      <div class="buttons button-all-style">
+         <a href="" width="2">戻る</a>
+      </div>
+      <div class="credit">
+        <p class="tlbl tlab1" id="Seisaku">制作者:<button class="inf inf1" onclick="script()">おにぎり</button></p>
+        <div class="setsm">
+           <p id="content"></p>
+        </div>
+        <p class="tlbl tlab1" id="sanko">参考させていただいた人:<button class="inf inf1" onclick="script()">机上の嗜みチャンネル</button>さん</p>
+        <p class="tlbl tlab1" id="Seisaku">追加したインプットhtml:<button class="inf inf1" onclick="script()"><インプットに接続しない為文字がありますinput type="color"></button></p>
+      </div>
+      
+   </div>
+   <!-- スタイルシート設定 -->
+   <style>
+      *{
+         /* スタイル初期化 */
+         margin: 0;
+         padding: 0;
+         /* ボーダーに合わせてサイズ変更 */
+         box-sizing: border-box;
+         /* フォント */
+         font-family: Arial, Helvetica, sans-serif;
+      }
+      .buttons-all-style{
+         display: block;
+      }
+      a{
+         padding: 1rem 3rem;
+         text-align: center;
+         display: flex;
+         background: blue;
+         color: #fff;
+         text-decoration: none;
+         max-width: 7px;
+         width: 5px;
+      }
+      .inf{
+         background: transparent;
+         border: transparent;
+         cursor: pointer;
+      }
+      
+   </style>
+   <!-- JavaScript設定 -->
+   <script>
+      const infgtall = document.querySelectorAll(".inf");
+      function script(){
+         const errcode = "development-error-90開発中エラー"
+         alert("開発中です。開発検討開始は、2024/6/1です。開発日は、2024/6/3ですのでお待ちください。エラーコード:"+ errcode);
+      };
+   </script>
+   <noscript>
+      <strong>
+         エラーが発生。
+         <span class="error">
+            エラーが発生したのでページを戻してください
+         </span>
+         <style>
+            strong, .error{
+               color: #FF0000;
+            }
+         </style>
+      </strong>
+   </noscript>
+</body>
+
+</html>

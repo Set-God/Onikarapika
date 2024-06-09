@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>開発中</title>
+</head>
+
+<body>
+   <div class="wrap">
+      <div class="devl">
+         <h1>エラーが発生しました。⚠️</h1>
+         <span id="btns" onclick="desc()">詳細</span>
+         <div class="error">
+            <div class="title">
+               <div class="btc" onclick="cseX()">
+                  <button class="cse" onclick="cseX()">X</button>
+               </div>
+               <h2>エラーが発生した詳細理由</h2>
+            </div>
+            <div class="content">
+               <p>エラーが発生した理由:<span class="errorcontent">開発段階の為</span></p>
+               <div class="errorcode">
+                  <p>エラーコード:<span class="code">0x000</span></p>
+               </div>
+               
+            </div>
+            
+         </div>
+         <div class="dark-btn">
+            <label>ダークモード : <button id="darkmode" class="ON" onclick="darkmode()">入</button><button id="darkmodeoff" class="OFF" onclick="darkoff()">切</button></label>
+         </div>
+      </div>
+   </div>
+   <style>
+      html{
+         width: 200vh;
+         height: 100vh;
+         display: flex;
+      }
+      .wrap{
+         width: 200vh;
+         height: 100vh;
+         display: flex;
+      }
+      .error{
+         background: #e454;
+         border: 2px solid #e454;
+         border-radius: 4px;
+         display: none;
+      }
+      .title{
+         background: transparent;
+         color: #fff;
+      }
+      .ON{
+         background: greenyellow;
+         border: none;
+         cursor: pointer;
+      }
+      /*.ON:Hover {
+         background: green;
+         border: none;
+      }*/
+      .OFF{
+         background: tomato;
+         border: none;
+         transform: translateX(3px);
+         cursor: pointer;
+      }
+      /*.OFF:Hover{
+         background: red;
+         border: none;
+      }*/
+      #btns{
+         color: blue;
+      }
+      #btns:Hover {
+         color: blue;
+         background: rgba(35, 49, 209, 0.28);
+      }
+      .btc {
+         background: tomato;
+         width: 30px;
+         height: 30px;
+         border: 2px solid firebrick;
+      }
+      .cse {
+         background: tomato;
+         border: none;
+         justify-content: center;
+         align-items: center;
+         display: flex;
+      }
+      .cse:Hover{
+         background: red;
+      }
+      .btc:Hover{
+         background: red;
+      }
+      .sett2{
+         border: none;
+         background: green;
+      }
+      .sett{
+         border: 4px solid greenyellow;
+         padding: 1rem;
+         background: green
+      }
+   </style>
+   <script>
+   let Err = document.querySelector('.error')
+   let dvls = document.querySelector('.devl')
+   let bys = document.querySelector('body');
+      function darkmode(){
+         dvls.style.color = 'white';
+         bys.style.background = 'black';
+      }
+      function darkoff() {
+         dvls.style.color = 'black';
+         bys.style.background = 'white';
+      }
+      function desc(){
+         Err.style.display = 'block';
+      }
+      function cseX(){
+         Err.style.display = 'none';
+      }
+   </script>
+</body>
+
+</html>
